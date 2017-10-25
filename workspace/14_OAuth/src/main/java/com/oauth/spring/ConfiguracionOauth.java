@@ -103,7 +103,7 @@ public class ConfiguracionOauth extends AuthorizationServerConfigurerAdapter {
 				.secret("secret")
 				.authorizedGrantTypes("client_credentials", "authorization_code", "refresh_token")
 				.scopes("read", "write") //Scopes que la aplicacion cliente pedira a cada usuario que le concedan
-				.redirectUris("http://localhost:8080/client/") //URL a la que se redirigirá al usuario una vez finalizada la autenticacion
+				.redirectUris("http://localhost:8083/client/") //URL a la que se redirigirá al usuario una vez finalizada la autenticacion
 
 				.and()
 
@@ -111,7 +111,7 @@ public class ConfiguracionOauth extends AuthorizationServerConfigurerAdapter {
 				.withClient("public") // No secret!
 				.authorizedGrantTypes("client_credentials", "implicit")
 				.scopes("read")
-				.redirectUris("http://localhost:8080/client/")
+				.redirectUris("http://localhost:8083/client/")
 
 				.and()
 
@@ -119,6 +119,6 @@ public class ConfiguracionOauth extends AuthorizationServerConfigurerAdapter {
 				.withClient("trusted").secret("secret").authorities("ROLE_TRUSTED_CLIENT")
 				.authorizedGrantTypes("client_credentials", "password", "authorization_code", "refresh_token")
 				.scopes("read", "write")
-				.redirectUris("http://localhost:8080/client/");
+				.redirectUris("http://localhost:8083/client/");
 	}
 }
