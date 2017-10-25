@@ -27,7 +27,8 @@ class HolaMundoController {
 	
 	@RequestMapping("/")
 	public String home() {
-		return message;
+		throw new RuntimeException();
+		//return message;
 
 	}
 }

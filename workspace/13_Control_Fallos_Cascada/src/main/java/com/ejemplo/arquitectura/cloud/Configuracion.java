@@ -21,7 +21,7 @@ public class Configuracion {
     }
 }
 
-@FeignClient(name="holamundo",  configuration = Configuracion.class)
+@FeignClient(name="holamundo")//,  configuration = Configuracion.class)
 interface HolaMundoCliente {
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
